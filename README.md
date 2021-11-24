@@ -21,3 +21,4 @@ favourite jokes etc.* Application is focused on clean, scalable and maintainable
 - Kotlin **coroutines** for asynchronous operation in synchronous, declarative code.
 - **MVVM** architecture is used
 - `databinding` used for less boilerplate code.
+- The UI is very basic.
