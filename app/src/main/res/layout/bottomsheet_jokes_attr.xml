@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="joke"
+            type="ishtiaq.codingchallenge.randomjokes.model.Joke" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:background="@color/norway_dark"
+            android:contentDescription="Punchline"
+            android:fontFamily="@font/roboto_slab_light"
+            android:gravity="center"
+            android:padding="@dimen/_4dp"
+            android:text="@{joke.delivery}"
+            android:textColor="@color/off_white"
+            android:textSize="@dimen/_jokePunch"
+            android:textStyle="bold"
+            android:visibility="@{joke.delivery.equals(`no-punchline`)?View.GONE:View.VISIBLE}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:background="@color/norway"
+            android:contentDescription="Joke or Setup"
+            android:fontFamily="@font/roboto_slab_light"
+            android:gravity="center"
+            android:padding="@dimen/_4dp"
+            android:text="@{joke.joke}"
+            android:textColor="@color/matte_black"
+            android:textSize="@{joke.delivery.equals(`no-punchline`)?@dimen/_jokeTitle:@dimen/_jokeTitleSmall}" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/off_white"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom"
+                android:layout_weight="1"
+                android:contentDescription="@string/jokeId"
+                android:fontFamily="@font/roboto_slab_light"
+                android:gravity="start"
+                android:paddingStart="@dimen/_4dp"
+                android:text="@{@string/jokeId(joke.jokeId)}"
+                android:textColor="@color/matte_black"
+                android:textSize="@dimen/_11sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_weight="1"
+                android:contentDescription="@string/jokeCategory"
+                android:fontFamily="@font/roboto_slab_light"
+                android:gravity="center_horizontal"
+                android:text="@{@string/jokeCategory(joke.category)}"
+                android:textColor="@color/matte_black"
+                android:textSize="@dimen/_11sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_weight="1"
+                android:contentDescription="@string/jokeType"
+                android:fontFamily="@font/roboto_slab_light"
+                android:gravity="end"
+                android:paddingEnd="@dimen/_4dp"
+                android:text="@{@string/jokeType(joke.type)}"
+                android:textColor="@color/matte_black"
+                android:textSize="@dimen/_11sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

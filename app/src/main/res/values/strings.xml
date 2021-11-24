@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Random Jokes</string>
+    <string name="times_this_app_is_opened">times this app is opened</string>
+
+    <!--Data binding helper-->
+    <string name="jokeId">Id= %1$s</string>
+    <string name="jokeType">Type= %1$s</string>
+    <string name="jokeCategory">Category= %1$s</string>
 </resources>

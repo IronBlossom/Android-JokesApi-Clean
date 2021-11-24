@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="radiusCorner">4dp</dimen>
+    <dimen name="_4dp">4dp</dimen>
+    <dimen name="_8dp">8dp</dimen>
+    <dimen name="_16dp">16dp</dimen>
+    <dimen name="_32dp">32dp</dimen>
+    <dimen name="_jokeTitle">18sp</dimen>
+    <dimen name="_jokeTitleSmall">14sp</dimen>
+    <dimen name="_jokePunch">22sp</dimen>
+    <dimen name="_11sp">11sp</dimen>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="joke"
+            type="ishtiaq.codingchallenge.randomjokes.model.Joke" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/flItemContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_jokerow"
+        android:padding="@dimen/_16dp">
+
+        <TextView
+            android:id="@+id/tvJokeSetup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4dp"
+            android:ellipsize="end"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_slab_light"
+            android:maxLines="2"
+            android:text="@{joke.joke}"
+            android:textColor="@color/matte_black"
+            android:textSize="@dimen/_jokeTitle" />
+    </FrameLayout>
+</layout>
