@@ -16,7 +16,7 @@ class JokesListViewModel(application: Application) : AndroidViewModel(applicatio
 
     init {
         viewModelScope.launch {
-            // First time showing jokes, without potential offence.
+            // First time showing jokes, without potential offense.
             repo.refreshJokes(
                 "Christmas",
                 blacklistFlags = arrayOf(
